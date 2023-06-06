@@ -1,0 +1,58 @@
+server:
+  port: 8080
+
+foodie:
+  gateway:
+    principal-added-secret: jksjd8498309*0390498940394kjdslfjlk38948KKJDHk84888*$(#8kdsjlkfsjdsjlk
+  internal:
+    secret: skdfjslkdfjl379834509*(&(*IO$U((**%(*IJR(($(*&9
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:4000/eureka
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: CUSTOMER-SERVICE
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/api/customer/**
+          filters:
+            - AuthenticationFilter
+        - id: RESTAURANT-SERVICE
+          uri: lb://RESTAURANT-SERVICE
+          predicates:
+            - Path=/api/restaurant/**
+          filters:
+            - AuthenticationFilter
+        - id: DELIVERY-SERVICE
+          uri: lb://DELIVERY-SERVICE
+          predicates:
+            - Path=/api/delivery/**
+          filters:
+            - AuthenticationFilter
+        - id: KITCHEN-SERVICE
+          uri: lb://KITCHEN-SERVICE
+          predicates:
+            - Path=/api/kitchen/**
+          filters:
+            - AuthenticationFilter
+        - id: ORDER-SERVICE
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - AuthenticationFilter
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**

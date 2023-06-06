@@ -1,0 +1,24 @@
+foodie:
+  gateway:
+    principal-added-secret: jksjd8498309*0390498940394kjdslfjlk38948KKJDHk84888*$(#8kdsjlkfsjdsjlk
+  internal:
+    secret: skdfjslkdfjl379834509*(&(*IO$U((**%(*IJR(($(*&9
+  auth:
+    jwtSecret: abmEPvBMexznn5Ipa6+XSM+NuFQvPAvpeIErYXojxQCfoA0WzQ53Kuo6y8VmZCSncMPnnFWvH8yvXqny/gnPspp/crMRh4E5Bg88ZT5mSi0ovEE+fMsH3wmEtz4yyimESifjM6x50PN84H/AOoZbqQ6LK9dp5VUmXvRJXp+nPVqAp135ykZDH+vLFkfUm4CXEW33Lrbh8em
+
+server:
+  port: 4005
+
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:4000/eureka
+
+spring:
+  application:
+    name: AUTH-SERVICE

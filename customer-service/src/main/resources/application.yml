@@ -1,0 +1,22 @@
+foodie:
+  gateway:
+    principal-added-secret: jksjd8498309*0390498940394kjdslfjlk38948KKJDHk84888*$(#8kdsjlkfsjdsjlk
+  internal:
+    secret: skdfjslkdfjl379834509*(&(*IO$U((**%(*IJR(($(*&9
+
+server:
+  port: 4001
+
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:4000/eureka
+
+spring:
+  application:
+    name: CUSTOMER-SERVICE

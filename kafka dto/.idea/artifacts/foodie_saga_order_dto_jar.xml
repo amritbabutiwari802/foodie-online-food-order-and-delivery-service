@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="foodie.saga.order-dto:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/foodie_saga_order_dto_jar</output-path>
+    <root id="archive" name="foodie.saga.order-dto.jar">
+      <element id="module-output" name="foodie.saga.order-dto" />
+    </root>
+  </artifact>
+</component>
